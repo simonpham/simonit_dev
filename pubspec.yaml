@@ -10,8 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^0.1.2
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -29,11 +27,11 @@ flutter:
   fonts:
    - family: Iosevka
      fonts:
-       - asset: assets/fonts/iosevka-ss08-regular.ttf
-       - asset: assets/fonts/iosevka-ss08-italic.ttf
+       - asset: fonts/iosevka-ss08-regular.ttf
+       - asset: fonts/iosevka-ss08-italic.ttf
          style: italic
-       - asset: assets/fonts/iosevka-ss08-bold.ttf
+       - asset: fonts/iosevka-ss08-bold.ttf
          weight: 700
-       - asset: assets/fonts/iosevka-ss08-bolditalic.ttf
+       - asset: fonts/iosevka-ss08-bolditalic.ttf
          style: italic
          weight: 700
