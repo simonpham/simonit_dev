@@ -79,7 +79,7 @@
 <script>
     var oldCreate = document.createElement;
     var create = function (type) {
-        if (type === "flt" && document.getElementById("loading-indicator").length > 0) {
+        if (type.includes("flt")) {
             var timer = setTimeout(function removeLoading() {
                 document.getElementById("loading-indicator").remove();
                 clearTimeout(timer);
