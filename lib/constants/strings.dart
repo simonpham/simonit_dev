@@ -9,7 +9,9 @@ class Str {
   static const String currentlyWritingTitle = "Currently writing";
   static const String currentlyWritingSubtitle = "(Via WakaTime)";
   static const String gitHubProfileUrl = "https://github.com/simonpham";
+  static const String gitHubTitle = "GitHub";
   static const String headerTitle = "#!/simonpham";
+  static const String linkedInTitle = "LinkedIn";
   static const String linkedInProfileUrl =
       "https://www.linkedin.com/in/simonphamvn";
   static const String linksTitle = "Links";

@@ -74,8 +74,8 @@ class MainPage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        BulletText("GitHub").wrapLink(Str.gitHubProfileUrl),
-        BulletText("LinkedIn").wrapLink(Str.linkedInProfileUrl),
+        BulletText(Str.gitHubTitle).wrapLink(Str.gitHubProfileUrl),
+        BulletText(Str.linkedInTitle).wrapLink(Str.linkedInProfileUrl),
       ],
     );
   }
