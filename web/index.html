@@ -79,8 +79,12 @@
 <script>
     var oldCreate = document.createElement;
     var create = function (type) {
-        if (type === "flt-canvas" && document.getElementById("loading-indicator").length > 0) {
-            document.getElementById("loading-indicator").remove();
+        if (type === "flt" && document.getElementById("loading-indicator").length > 0) {
+            var timer = setTimeout(function removeLoading() {
+                document.getElementById("loading-indicator").remove();
+                clearTimeout(timer);
+            }, 1000);
+            document.createElement = oldCreate;
         }
         return oldCreate.call(document, type);
     };
