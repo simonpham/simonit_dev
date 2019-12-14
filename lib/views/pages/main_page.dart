@@ -55,6 +55,7 @@ class MainPage extends StatelessWidget {
     return SectionHeader(
       title: Str.currentlyWritingTitle,
       subtitle: Str.currentlyWritingSubtitle,
+      subtitleLink: Str.wakaTimeProfileUrl,
     );
   }
 

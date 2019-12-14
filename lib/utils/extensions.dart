@@ -1,4 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js' as js;
 
 extension ExtendedWidget on Widget {
   Widget wrapWithContainer() {
@@ -29,6 +33,18 @@ extension ExtendedWidget on Widget {
   Widget addPaddingVertical([int factor = 1]) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8.0 * factor),
+      child: this,
+    );
+  }
+
+  Widget wrapLink([String url]) {
+    if (url == null || url.isEmpty) {
+      return this;
+    }
+    return InkWell(
+      onTap: () {
+        js.context.callMethod("open", [url]);
+      },
       child: this,
     );
   }

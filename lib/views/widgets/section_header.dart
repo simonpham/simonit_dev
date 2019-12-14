@@ -5,11 +5,13 @@ import 'package:simonit_dev/utils/extensions.dart';
 class SectionHeader extends StatelessWidget {
   final String title;
   final String subtitle;
+  final String subtitleLink;
 
   const SectionHeader({
     Key key,
     @required this.title,
     this.subtitle,
+    this.subtitleLink,
   }) : super(key: key);
 
   @override
@@ -55,6 +57,6 @@ class SectionHeader extends StatelessWidget {
         fontWeight: FontWeight.w400,
         color: Color.fromRGBO(192, 192, 192, 1.0),
       ),
-    );
+    ).wrapLink(subtitleLink);
   }
 }
