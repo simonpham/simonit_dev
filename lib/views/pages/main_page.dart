@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simonit_dev/constants/strings.dart';
+import 'package:simonit_dev/views/widgets/bullet_text.dart';
 import 'package:simonit_dev/views/widgets/header.dart';
 import 'package:simonit_dev/views/widgets/section_content.dart';
 import 'package:simonit_dev/views/widgets/section_header.dart';
@@ -26,7 +27,7 @@ class MainPage extends StatelessWidget {
               _buildCurrentlyWritingHeader().addMarginTop(1),
               _buildCurrentlyWritingSection(),
               _buildLinksHeader().addMarginTop(1),
-              _buildLinksSection(),
+              _buildLinksSection().addMarginTop(1),
             ],
           ).wrapWithContainer(),
         ),
@@ -72,7 +73,10 @@ class MainPage extends StatelessWidget {
   Widget _buildLinksSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[],
+      children: <Widget>[
+        BulletText("GitHub").wrapLink(Str.gitHubProfileUrl),
+        BulletText("LinkedIn").wrapLink(Str.linkedInProfileUrl),
+      ],
     );
   }
 }
