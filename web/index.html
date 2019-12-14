@@ -76,20 +76,6 @@
         </div>
     </div>
 </div>
-<script>
-    var oldCreate = document.createElement;
-    var create = function (type) {
-        if (type.includes("flt")) {
-            var timer = setTimeout(function removeLoading() {
-                document.getElementById("loading-indicator").remove();
-                clearTimeout(timer);
-            }, 1000);
-            document.createElement = oldCreate;
-        }
-        return oldCreate.call(document, type);
-    };
-    document.createElement = create;
-</script>
 <script src="main.dart.js" type="application/javascript"></script>
 </body>
 </html>
