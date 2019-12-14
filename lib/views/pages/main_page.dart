@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simonit_dev/constants/strings.dart';
 import 'package:simonit_dev/views/widgets/header.dart';
 import 'package:simonit_dev/views/widgets/section_content.dart';
 import 'package:simonit_dev/views/widgets/section_header.dart';
@@ -13,7 +14,7 @@ class MainPage extends StatelessWidget {
         titleSpacing: 0.0,
         elevation: 0.0,
         centerTitle: true,
-        title: Header("#!/simonpham"),
+        title: Header(Str.headerTitle),
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -35,8 +36,8 @@ class MainPage extends StatelessWidget {
 
   Widget _buildAboutHeader() {
     return SectionHeader(
-      title: "About",
-      subtitle: "(Location: Ho Chi Minh City, Vietnam)",
+      title: Str.aboutTitle,
+      subtitle: Str.aboutSubtitle,
     );
   }
 
@@ -44,17 +45,16 @@ class MainPage extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        SectionContent(
-            "Mobile developer, specialized in Android (Kotlin), Flutter and React Native."),
-        SectionContent("Working as a full-stack mobile developer at HasBrain"),
+        SectionContent(Str.aboutSection1),
+        SectionContent(Str.aboutSection2),
       ],
     );
   }
 
   Widget _buildCurrentlyWritingHeader() {
     return SectionHeader(
-      title: "Currently writing",
-      subtitle: "(Via WakaTime)",
+      title: Str.currentlyWritingTitle,
+      subtitle: Str.currentlyWritingSubtitle,
     );
   }
 
@@ -64,15 +64,14 @@ class MainPage extends StatelessWidget {
 
   Widget _buildLinksHeader() {
     return SectionHeader(
-      title: "Links",
+      title: Str.linksTitle,
     );
   }
 
   Widget _buildLinksSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-      ],
+      children: <Widget>[],
     );
   }
 }
