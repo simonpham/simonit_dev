@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:simonit_dev/utils/extensions.dart';
+
 class SectionContent extends StatelessWidget {
   final String text;
 
@@ -10,14 +12,11 @@ class SectionContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 16.0,
-        ),
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 16.0,
       ),
-    );
+    ).addPaddingVertical();
   }
 }

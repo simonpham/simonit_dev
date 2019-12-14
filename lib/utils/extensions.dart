@@ -16,21 +16,21 @@ extension ExtendedWidget on Widget {
     );
   }
 
-  Widget addMarginTop([int factor = 2]) {
+  Widget addMarginTop([num factor = 2]) {
     return Container(
       margin: EdgeInsets.only(top: 8.0 * factor),
       child: this,
     );
   }
 
-  Widget addMarginLeft([int factor = 1]) {
+  Widget addMarginLeft([num factor = 1]) {
     return Container(
       margin: EdgeInsets.only(left: 8.0 * factor),
       child: this,
     );
   }
 
-  Widget addPaddingVertical([int factor = 1]) {
+  Widget addPaddingVertical([num factor = 1]) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8.0 * factor),
       child: this,
