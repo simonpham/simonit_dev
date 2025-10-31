@@ -4,15 +4,15 @@ import 'package:simonit_dev/utils/extensions.dart';
 
 class SectionHeader extends StatelessWidget {
   final String title;
-  final String subtitle;
-  final String subtitleLink;
+  final String? subtitle;
+  final String? subtitleLink;
 
   const SectionHeader({
-    Key key,
-    @required this.title,
+    super.key,
+    required this.title,
     this.subtitle,
     this.subtitleLink,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +48,11 @@ class SectionHeader extends StatelessWidget {
   }
 
   Widget _buildSubtitle() {
+    final subtitle = this.subtitle;
     if (subtitle == null || subtitle.isEmpty) {
       return SizedBox();
     }
+    final subtitleLink = this.subtitleLink;
     return Text(
       subtitle,
       style: TextStyle(

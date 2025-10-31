@@ -7,8 +7,8 @@ class BulletText extends StatelessWidget {
 
   const BulletText(
     this.text, {
-    Key key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
